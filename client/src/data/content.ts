@@ -46,11 +46,11 @@ export const aboutContent = {
   title: "About EduReach College",
   subtitle: "Empowering Futures Since 2005",
   description:
-    "EduReach College is a premier engineering and technology institution established in 2005, located in Hyderabad, Telangana. Affiliated with JNTU Hyderabad and approved by AICTE, New Delhi, our 25-acre campus features smart classrooms, advanced laboratories, and a central library with 50,000+ books.",
+    "EduReach College is a premier engineering and technology institution established in 2005, located in Bangalore, Karnataka. Affiliated with CBSE and approved by AICTE, New Delhi, our 25-acre campus features smart classrooms, advanced laboratories, and a central library with 50,000+ books.",
   highlights: [
     { value: "150+", label: "Experienced Professors" },
     { value: "15:1", label: "Student-Faculty Ratio" },
-    { value: "Top 50", label: "In Telangana" },
+    { value: "Top 50", label: "In Karnataka" },
     { value: "10,000+", label: "Alumni Worldwide" },
   ],
 };

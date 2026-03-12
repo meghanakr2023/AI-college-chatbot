@@ -4,6 +4,7 @@ import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import FloatingChatButton from "./components/FloatingChatButton";
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
+        {/* Floating chat button — renders on every page */}
+        <FloatingChatButton />
       </AuthProvider>
     </BrowserRouter>
   );

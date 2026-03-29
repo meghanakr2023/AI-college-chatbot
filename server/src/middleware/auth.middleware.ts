@@ -29,7 +29,7 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction): void =
     const decoded = verifyToken(token);
     req.user = decoded;
     next();
-    } catch (error) {
+  } catch (error) {
     if (error instanceof Error) {
       if (error.name === "TokenExpiredError") {
         res.status(401).json({ success: false, message: "Token has expired. Please log in again." });

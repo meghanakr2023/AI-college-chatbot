@@ -23,6 +23,7 @@ export const register = async (req: Request, res: Response, next: NextFunction):
       res.status(409).json({ success: false, message: "An account with this email already exists." });
       return;
     }
+
     const hashedPassword = await hashPassword(password);
     const user = await User.create({
       name,
@@ -45,6 +46,7 @@ export const register = async (req: Request, res: Response, next: NextFunction):
     next(error);
   }
 };
+
 // POST /api/auth/login — Public — Verify credentials, return JWT
 export const login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
@@ -76,7 +78,7 @@ export const login = async (req: Request, res: Response, next: NextFunction): Pr
         token,
         user: { id: user._id, name: user.name, email: user.email, phone: user.phone },
       },
-      });
+    });
   } catch (error) {
     next(error);
   }
@@ -106,7 +108,7 @@ export const getMe = async (req: Request, res: Response, next: NextFunction): Pr
           name: user.name,
           email: user.email,
           phone: user.phone,
-           created_at: user.created_at,
+          created_at: user.created_at,
         },
       },
     });
